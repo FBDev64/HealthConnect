@@ -1,0 +1,80 @@
+/* Sélectionne tous les éléments de la page */
+* {
+    font-family: 'Consolas', monospace;
+  }
+  
+  /* Sélectionne uniquement les titres h1 */
+  h1 {
+    font-family: 'Consolas', monospace;
+    font-size: 2em;
+    font-weight: bold;
+    color: crimson;
+  }
+  
+  /* Sélectionne uniquement les paragraphes */
+  p {
+    font-family: 'Consolas', monospace;
+    font-size: 1.2em;
+    line-height: 1.5;
+  }
+  
+        body {
+      background-color: #f0f0f0;
+    }
+    
+    form {
+      background-color: #fff;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0px 0px 5px #ccc;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+    
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+    }
+    
+    textarea {
+      height: 100px;
+    }
+    
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+    
+    input[type="radio"] {
+      margin-right: 5px;
+    }
+    
+    button[type="button"] {
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    
+    button[type="button"]:hover {
+      background-color: #3e8e41;
+    }
+    
+    .error {
+      color: red;
+      font-style: italic;
+      margin-top: 5px;
+    }

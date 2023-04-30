@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Formulaire de santé SantéReport</title>
+    <h1>SantéReport</h1>
+    <style>
+      /* Sélectionne tous les éléments de la page */
+* {
+  font-family: 'Consolas', monospace;
+}
+
+/* Sélectionne uniquement les titres h1 */
+h1 {
+  font-family: 'Consolas', monospace;
+  font-size: 2em;
+  font-weight: bold;
+  color: crimson;
+}
+
+/* Sélectionne uniquement les paragraphes */
+p {
+  font-family: 'Consolas', monospace;
+  font-size: 1.2em;
+  line-height: 1.5;
+}
+
+      body {
+    background-color: #f0f0f0;
+  }
+  
+  form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #ccc;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  textarea {
+    height: 100px;
+  }
+  
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  
+  input[type="radio"] {
+    margin-right: 5px;
+  }
+  
+  button[type="button"] {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #3e8e41;
+  }
+  
+  .error {
+    color: crimson;
+    font-style: italic;
+    margin-top: 5px;
+  }
+    </style>
+  </head>
+  <body> 
+    <form>
+      <label for="nom">Nom :</label>
+  <input type="text" id="nom"><br><br>
+  
+  <label for="prenom">Prénom :</label>
+  <input type="text" id="prenom"><br><br>
+
+  <label for="tel">Téléphone :</label>
+  <input type="tel" id="tel"><br><br>
+
+  <label for="adresse">Adresse :</label>
+  <textarea id="adresse"></textarea><br><br>
+  
+  <label for="genre">Genre :</label>
+  <input type="radio" id="genre_masculin" name="genre" value="masculin">
+  <label for="genre_masculin">Masculin</label>
+  <input type="radio" id="genre_feminin" name="genre" value="feminin">
+  <label for="genre_feminin">Féminin</label><br><br>
+
+  <label for="pathologies">Pathologies :</label>
+  <input type="text" id="pathologies"><br><br>       
+  
+  <label for="allergies">Allergies :</label>
+  <input type="text" id="allergies"><br><br>
+  
+  <label for="medicaments">Médicaments :</label>
+  <input type="text" id="medicaments"><br><br>
+  
+  <label for="groupe_sanguin">Groupe sanguin :</label>
+  <input type="radio" id="O+" name="groupe_sanguin" value="O+">
+  <label for="O1">O+</label>
+  <input type="radio" id="O-" name="groupe_sanguin" value="O-">
+  <label for="O1">O-</label>
+  <input type="radio" id="A+" name="groupe_sanguin" value="A+">
+  <label for="O1">A+</label>
+  <input type="radio" id="A-" name="groupe_sanguin" value="A-">
+  <label for="O1">A-</A-></label>
+  <input type="radio" id="B+" name="groupe_sanguin" value="B+">
+  <label for="O1">B+</label>
+  <input type="radio" id="B-" name="groupe_sanguin" value="B-">
+  <label for="O1">B-</B-></label>
+  <input type="radio" id="AB+" name="groupe_sanguin" value="AB+">
+  <label for="O1">AB+</label>
+  <input type="radio" id="AB-" name="groupe_sanguin" value="AB-">
+  <label for="O1">AB-</label>
+  
+  <label for="notes_medicales">Notes médicales :</label>
+  <textarea id="notes_medicales"></textarea><br><br>
+  <label for="myfile">Choisir un fichier:</label>
+  <input type="file" id="myfile" name="myfile"><br><br>
+  
+  
+  <label for="donneur_organe">Êtes-vous donneur d'organe ?</label>
+  <input type="checkbox" id="donneur_organe"><br><br>
+  
+  <input type="reset">
+  <input type="submit" value="Envoyer">
+    </form>
+
+    <script>
+      function enregistrer() {
+        const nom = document.getElementById("nom").value;
+        const prenom = document.getElementById("prenom").value;
+        const pathologies = document.getElementById("pathologies").value;
+        const allergies = document.getElementById("allergies").value;
+        const medicaments = document.getElementById("medicaments").value;
+        const groupe_sanguin = document.getElementById("groupe_sanguin").value;
+        const notes_medicales = document.getElementById("notes_medicales").value;
+        const adresse = document.getElementById("adresse").value;
+        const donneur_organe = document.getElementById("donneur_organe").checked;
+        const genre = document.querySelector('input[name="genre"]:checked').value;
+
+        // Faire quelque chose avec les données saisies
+        console.log(nom, prenom, pathologies, allergies, medicaments, groupe_sanguin, notes_medicales, adresse, donneur_organe, genre);
+      }
+    </script>
+  </body>
+</html>
